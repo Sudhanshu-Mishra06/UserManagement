@@ -1,0 +1,54 @@
+﻿<h2>Users</h2>
+
+<a href="/Users/CreateUser"
+   class="btn btn-success mb-3">
+    Add User
+</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.LoginId</td>
+                <td>@item.Password</td>
+
+                <td>
+
+                    <a href="/Users/UpdateUser/@item.Id"
+                       class="btn btn-warning btn-sm">
+                        Edit
+                    </a>
+
+                    <a href="/Users/Delete/@item.Id"
+                       class="btn btn-danger btn-sm">
+                        Delete
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a href="/Home/Dashboard" class="btn btn-secondary">
+    Got to Dashboard
+</a>
+
+<a href="/UserDetails/Index" class="btn btn-primary">
+    Manage User Details
+</a>
+
+<a href="/UserAudits/Index" class="btn btn-dark">
+    Audit Logs Details
+</a>
+

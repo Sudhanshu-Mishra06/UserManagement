@@ -1,0 +1,56 @@
+﻿@model UserDetails
+
+<h2>Edit User Details</h2>
+
+<form method="post">
+
+    <input type="hidden"
+           name="Id"
+           value="@Model.Id" />
+
+    <div class="mb-3">
+        <label>Account</label>
+        <input type="text"
+               name="Account"
+               class="form-control"
+               value="@Model.Account" />
+    </div>
+
+    <div class="mb-3">
+        <label>Narration</label>
+        <input type="text"
+               name="Narration"
+               class="form-control"
+               value="@Model.Narration" />
+    </div>
+
+    <div class="mb-3">
+        <label>Currency</label>
+        <input type="text"
+               name="Currency"
+               class="form-control"
+               value="@Model.Currency" />
+    </div>
+
+    <div class="mb-3">
+        <label>Credit</label>
+        <input type="number"
+               name="Credit"
+               class="form-control"
+               value="@Model.Credit" />
+    </div>
+
+    <div class="mb-3">
+        <label>Debit</label>
+        <input type="number"
+               name="Debit"
+               class="form-control"
+               value="@Model.Debit" />
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary">
+        Update
+    </button>
+
+</form>

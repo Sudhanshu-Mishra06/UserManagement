@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - UserCrudApp</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <div class="container mt-4">
+
+
+        <div class="container-fluid bg-light p-2 border-bottom">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <!-- Back Button -->
+                <button class="btn btn-secondary"
+                        onclick="history.back()">
+                    ← Back
+                </button>
+
+                <!-- User Profile -->
+                <div class="dropdown">
+
+                    <button class="btn btn-outline-dark dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown">
+
+                        👤 @Context.Request.Cookies["UserName"]
+
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="/Account/Logout">
+                                Logout
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted mt-5">
+        <div class="container text-center py-3">
+            UserCrudApp Developed By Sudhanshu Mishra &copy; 2026
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<h2>User Details</h2>
+
+<a href="/UserDetails/AddUser" class="btn btn-success mb-3">Add User Details</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Account</th>
+            <th>Narration</th>
+            <th>Credit</th>
+            <th>Debit</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Account</td>
+                <td>@item.Narration</td>
+                <td>@item.Credit</td>
+                <td>@item.Debit</td>
+                <td>@item.CreatedAt</td>
+                <td>
+                    <a href="/UserDetails/EditUser/@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/UserDetails/Delete/@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/UserDetails/Index" class="btn btn-primary">
+    Go to Dashboard
+</a>
+
+<a href="/Users/Index" class="btn btn-secondary">
+    Login User Details
+</a>
+
+<a href="/UserAudits/Index" class="btn btn-dark">
+    Audit Logs Details
+</a>

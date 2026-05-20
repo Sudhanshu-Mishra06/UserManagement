@@ -1,0 +1,38 @@
+﻿<h2>Audit Logs</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Table</th>
+            <th>Field</th>
+            <th>Old Value</th>
+            <th>New Value</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.TableName</td>
+                <td>@log.FieldName</td>
+                <td>@log.OldValue</td>
+                <td>@log.NewValue</td>
+                <td>@log.ChangedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Home/Dashboard" class="btn btn-dark">
+    Got to Dashboard
+</a>
+
+<a href="/Users/Index" class="btn btn-secondary">
+    Login User Details
+</a>
+
+<a href="/UserDetails/Index" class="btn btn-primary">
+    Manage User Details
+</a>
+

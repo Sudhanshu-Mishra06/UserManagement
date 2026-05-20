@@ -1,0 +1,31 @@
+﻿<h2>Dashboard</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h5>Total Credit</h5>
+            <h3>@ViewBag.TotalCredit</h3>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h5>Total Debit</h5>
+            <h3>@ViewBag.TotalDebit</h3>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<a href="/UserDetails/Index" class="btn btn-primary">
+    Manage User Details
+</a>
+
+<a href="/Users/Index" class="btn btn-secondary">
+    Login User Details
+</a>
+
+<a href="/UserAudits/Index" class="btn btn-dark">
+    Audit Logs Details
+</a>
